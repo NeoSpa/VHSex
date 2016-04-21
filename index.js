@@ -15,7 +15,7 @@ fs.readFile('videos.txt', 'utf-8', function(err, data) {
       var d = new Date();
 
       video.on('info', function(info) {
-        console.log('Downloading' + info._filename + '...\n');
+        console.log('Downloading ' + info._filename + '...\n');
         video.pipe(fs.createWriteStream('./tmp/'+d.getTime()+'.mp4'));
       });
     }
