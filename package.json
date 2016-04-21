@@ -1,0 +1,17 @@
+{
+  "name": "VHSex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fetch": "node index.js",
+    "concat": "cd tmp; for f in *.mp4; do echo \"file '$f'\" >> ./ffmpeg.txt; ffmpeg -f concat -i ffmpeg.txt -y -c copy output.mp4; done",
+    "build": "npm run fetch && npm run concat"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "youtube-dl": "^1.11.1"
+  }
+}
